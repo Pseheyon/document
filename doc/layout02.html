@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본레이아웃02</title>
+    <style>
+        /* reset */
+        *{margin: 0;padding: 0;box-sizing: border-box;font-weight: normal; color: inherit;}
+        ul,ol{list-style: none;}
+        a{text-decoration: none;}
+        img{vertical-align: middle;}
+        body{line-height: 1;}
+
+        /* basic float layout */
+        h1{ font-size: 30px; text-align: center; margin-bottom: 100px;}
+
+        .sc03{
+            padding: 100px;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        .sc03 h2{
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .sc03>p{
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+        .sc03 .container{
+            margin:  0 auto;
+            width: 1200px;
+        }
+
+        .sc03 .container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .sc03 figure{
+            float: left;
+            width: 33.333333%;
+            padding: 0 15px;
+        }
+        .sc03 figure img{
+            width: 100%;
+            margin-bottom: 20px;
+            margin-right: 10px;
+        }
+        .sc03 figure p {
+            color: cornflowerblue;
+            margin-bottom: 20px;
+        }
+        .sc03 figure a {
+            display: block;
+            margin:0 auto;
+            width: 160px;
+            height: 40px;
+            background: #333;
+            color: #fff;
+            line-height: 40px;
+            border-radius: 10px;
+            
+        }
+
+        /* sc04 */
+        .sc04{
+            padding: 100px;
+            background-color: white;
+            text-align: center;
+        }
+        .sc04 h2{
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .sc04>p{
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+        .sc04 .container{
+            margin:  0 auto;
+            width: 1200px;
+        }
+
+        .sc04 .container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .sc04 figure{
+            float: left;
+            width: 25%;
+            padding: 0 15px;
+        }
+        .sc04 figure img{
+            width: 100%;
+            margin-bottom: 20px;
+            margin-right: 10px;
+        }
+        .sc04 figure p {
+            color: cornflowerblue;
+            margin-bottom: 20px;
+        }
+        .sc04 figure a {
+            display: block;
+            margin:0 auto;
+            width: 160px;
+            height: 40px;
+            background: #333;
+            color: #fff;
+            line-height: 40px;
+            border-radius: 10px;
+            
+        }
+
+        /* sc005 */
+        .sc05{
+            padding: 100px;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        .sc05 h2{
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .sc05>p{
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+        .sc05 .container{
+            margin:  0 auto;
+            width: 1200px;
+        }
+
+        .sc05 .container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .sc05 figure{
+            float: left;
+            width: 20%;
+            padding: 0 15px;
+        }
+        .sc05 figure img{
+            width: 100%;
+            margin-bottom: 20px;
+            margin-right: 10px;
+        }
+        .sc05 figure p {
+            color: cornflowerblue;
+            margin-bottom: 20px;
+        }
+        .sc05 figure a {
+            display: block;
+            margin:0 auto;
+            width: 160px;
+            height: 40px;
+            background: #333;
+            color: #fff;
+            line-height: 40px;
+            border-radius: 10px;
+            
+        }
+
+        /* sc06 */
+        .sc06{
+            padding: 100px;
+            background-color: #fff;
+            text-align: center;
+        }
+        .sc06 h2{
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .sc06>p{
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+        .sc06 .container{
+            margin:  0 auto;
+            width: 1200px;
+        }
+
+        .sc06 .container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .sc06 figure{
+            float: left;
+            width: 16.666666%;
+            padding: 0 15px;
+        }
+        .sc06 figure img{
+            width: 100%;
+            margin-bottom: 20px;
+            margin-right: 10px;
+        }
+        .sc06 figure p {
+            color: cornflowerblue;
+            margin-bottom: 20px;
+        }
+        .sc06 figure a {
+            display: block;
+            margin:0 auto;
+            width: 160px;
+            height: 40px;
+            background: #333;
+            color: #fff;
+            line-height: 40px;
+            border-radius: 10px;
+            
+        }
+        /* sc02 */
+        .sc02{
+            padding: 100px;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        .sc02 h2{
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .sc02>p{
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+        .sc02 .container{
+            margin:  0 auto;
+            width: 1200px;
+        }
+
+        .sc02 .container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .sc02 figure{
+            float: left;
+            width: 50%;
+            padding: 0 15px;
+        }
+        .sc02 figure img{
+            width: 100%;
+            margin-bottom: 20px;
+            margin-right: 10px;
+        }
+        .sc02 figure p {
+            color: cornflowerblue;
+            margin-bottom: 20px;
+        }
+        .sc02 figure a {
+            display: block;
+            margin:0 auto;
+            width: 160px;
+            height: 40px;
+            background: #333;
+            color: #fff;
+            line-height: 40px;
+            border-radius: 10px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>기본 레이아웃 02</h1>
+
+    <section class="sc03">
+        <h2>ahahahahaha</h2>
+        <p>hahahahahahahahahahahahahahahahah</p>
+        <div class="container">
+            <figure>
+                <img src="../img/menu_n01.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n02.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n03.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+        </div>
+    </section>
+    <section class="sc04">
+        <h2>ahahahahaha</h2>
+        <p>hahahahahahahahahahahahahahahahah</p>
+        <div class="container">
+            <figure>
+                <img src="../img/menu_n01.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n02.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n03.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n03.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+        </div>
+    </section>
+    <section class="sc05">
+        <h2>ahahahahaha</h2>
+        <p>hahahahahahahahahahahahahahahahah</p>
+        <div class="container">
+            <figure>
+                <img src="../img/menu_n01.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n02.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n03.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n03.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n03.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+        </div>
+    </section>
+    <section class="sc06">
+        <h2>ahahahahaha</h2>
+        <p>hahahahahahahahahahahahahahahahah</p>
+        <div class="container">
+            <figure>
+                <img src="../img/menu_n01.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n02.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n03.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n03.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n03.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n03.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+        </div>
+    </section>
+    <section class="sc02">
+        <h2>ahahahahaha</h2>
+        <p>hahahahahahahahahahahahahahahahah</p>
+        <div class="container">
+            <figure>
+                <img src="../img/menu_n01.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+            <figure>
+                <img src="../img/menu_n02.jpg" alt="">
+                <p>hahahahahah</p>
+                <a href="#">more</a>
+            </figure>
+        </div>
+    </section>
+</body>
+</html>
