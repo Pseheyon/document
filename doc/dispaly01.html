@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디스플레이-디스플에이에 대해서 알아보자. </title>
+    <style>
+        /* reset */
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        
+        .none{
+            display: none ;
+            
+        }
+        
+        @media (max-width:1000px) {
+            .none {
+                display: block;
+                font-size: 0;
+                text-align: right;
+            }
+            i{
+                position: fixed;
+                top:50px;
+                right: 50px;
+                font-size: 30px;
+                padding:  10px;
+                background-color: #ddd;
+            }
+        }
+
+/*         
+        nav{ㅇㄹㅁㄴㅇㄹㅁㅇㄹㅁ한영키가 안먹어 애니 데스크
+        } */
+
+
+    </style>
+</head>
+<body>
+    <div class="none">
+        <i class="xi-bars"></i>
+        <i class="xi-bars"></i>
+        <i class="xi-bars"></i>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#">menu01</a></li>
+            <li><a href="#">menu02</a></li>
+            <li><a href="#">menu03</a></li>
+            <li><a href="#">menu04</a></li>
+            <li><a href="#">menu05</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

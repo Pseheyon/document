@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+        /* reset */
+        *{margin: 0;padding: 0;box-sizing: border-box; font-size: inherit;font-weight: normal;font-style: normal;}
+        a{color: inherit;text-decoration: none;}
+        ul{list-style: none;text-decoration: none;}
+        img{vertical-align: middle; max-width: 100%;}
+
+
+        body{background-color: rgb(47, 54, 65);
+             font-family: 'Noto Sans KR';
+            color: #fff;}
+
+        .Wrap{
+            
+        }
+
+        .headerWrap{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .topBanner{
+            background-color: rgb(143, 176, 226);
+            color: #fff;
+            font-size: 15px;
+            padding: 5px 15px;
+        }
+        .topBanner .inner{
+            display: flex;
+            justify-content: space-between;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .topBanner ul{
+            display: flex;
+        }
+        .topBanner .left li{
+            margin-right: 30px;
+        }
+
+        .topBanner .right{
+            gap: 30px;
+        }
+        .topBanner .right li{
+            gap: 30px;
+            position: relative;
+        }
+
+        .topBanner .right li~li::before {
+            content: "";
+            display: block;
+            width: 2px;
+            height: 12px;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            left: -15px;
+            transform: translateY(-50%);
+        }
+
+        .headerWrap h1{
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .gnb{
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .gnb ul{
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            width: 1200px;
+            margin: 0 auto;
+            color: #fff;
+        }
+
+        .mainVisual{
+            height: 100vh;
+            /* background-image: url(./img/asdf.jpg) no-repeat center center/cover; 
+            축약형이 왜 안될까?*/
+            background-image: url(./img/asdf.jpg);
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: top;
+            background-size: cover;
+        }
+        .mainVisual .slogan {
+            color: #fff;
+            position: absolute;
+            inset: 50% auto auto 50%;
+            top: 50%;
+            left: 50%;
+            width: 1200px;
+            padding: 0 15px;
+            transform: translate(-50%);
+            
+        }
+        .mainVisual .slogan h2{
+            font-size: 40px;
+            font-weight: 400;
+            letter-spacing: 1em;
+            margin-bottom: 30px;
+        }
+
+        .mainVisual .slogan p{
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.618;
+        }
+
+        .mainContent{
+            margin: 0 auto;
+            text-align: center;
+        }
+        .mainContent h2{
+            font-size: 17px;
+            font-weight: 400;
+            letter-spacing: 1em;
+            margin-top: 100px;
+            margin-bottom: 30px;
+        }
+
+        .mainContent h2::after{
+            content: "";
+            display: block;
+            width: 100px;
+            height: 2px;
+            background-color: rgb(143, 176, 226);
+            margin: 30px auto;
+        }
+
+        .mainContent p{
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: -0.025em;
+            margin-bottom: 30px;
+            
+        }
+
+        .mainContent .container{
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+            
+        }
+        .mainContent .container figure{
+            flex: 1;
+            padding: 0 15px;
+            
+        }
+        
+        
+        .mainContent .container .inner img {
+            width: 100%;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .mainContent .container .inner:hover img{
+            transform: scale(1.2,1.2);
+        }
+        .footerWrap{
+            padding: 50px 0;
+            background: #444;
+            color: #fff;
+            text-align: center;
+            letter-spacing: -0.025em;
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+        .footerWrap .sns{
+            padding: 20px 0;
+        }
+        .footerWrap .sns i{
+            padding: 10px;
+            background-color: #333;
+        }
+        .toTop{
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+
+        }
+        .toTop i{
+            padding:  30px;
+            background-color: rgb(143, 176, 226);
+            color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="Wrap">
+        <header class="headerWrap">
+            <div class="topBanner">
+                <div class="inner">
+                    <ul class="left">
+                        <li><a href="#"><i class="xi-chip-o">KOR</i></a></li>
+                        <li><a href="#">store</a></li>
+                    </ul>
+                    <ul class="right">
+                        <li><a href="#">swarovski</a></li>
+                        <li><a href="#">scs</a></li>
+                        <li><a href="#">login</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h1>
+                <img src="./img/logo.png" alt="">
+            </h1>
+            <nav class="gnb">
+                <ul >
+                    <li><a href="#">NEW IN</a></li>
+                    <li><a href="#">JEWELRY</a></li>
+                    <li><a href="#">WATCHES</a></li>
+                    <li><a href="#">ACCESSORIES</a></li>
+                    <li><a href="#">DECORATIONS</a></li>
+                    <li><a href="#">GIFTS</a></li>
+                    <li><a href="#">COLLECTIONS</a></li>
+                    <li><a href="#">GIFTS</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="mainVisual">
+                <div class="slogan">
+                    <h2>우리복실이가 최고야!</h2>
+                    <p>복실이는 10살 믹스 똥깨입니다. <br>아마 말티즈가 섞인것 같다고 하지만 막상 오해받는건 삽살개임ㅋㅋ</p> 산책을 제일 좋아하고 관심받는것도 좋아함ㅎㅎ 나도 좋아함 복실이 칭찬해주면 기분좋아서 간식먹음 관심받는게 재밌나봐... 알아서 좀 먹어라!!!! 이 편식 쟁이야~</br>그치만 귀여웡 최고야 복실이가 정말 최고얌</p>
+                </div>
+            </section>
+            <section class="mainContent">
+                <h2>우리복실이가 최고야!</h2>
+                    <p>복실이는 10살 믹스 똥깨임 <br>산책을 제일 좋아하고 관심받는것도 좋아함ㅎㅎ 귀여웡 최고야 복실이가 정말 최고얌</p>
+                <div class="container">
+                    <figure>
+                        <div class="inner">
+                            <img src="./img/KakaoTalk_20181017_214246296.jpg" alt="">
+                        </div>
+                        <strong>best dog "BOKSIL"</strong>
+                    </figure>
+                    <figure>
+                        <div class="inner">
+                            <img src="./img/KakaoTalk_20181208_150647371 (2).jpg" alt="">
+                        </div>
+                        <strong>best dog "BOKSIL"</strong>
+                    </figure>
+                    <figure>
+                        <div class="inner">
+                            <img src="./img/KakaoTalk_20181208_152500584.jpg" alt="">
+                        </div>
+                        <strong>best dog "BOKSIL"</strong>
+                    </figure>
+                </div>
+            </section>
+        </main>
+        <footer class="footerWrap">
+            <ul>
+                <li>a;skdfj;aksdfj;adksfja;dkfja;</li>
+                <li>a;skdfj;aksdfj;adksfja;dkfja;</li>
+                <li>a;skdfj;aksdfj;adksfja;dkasdfasdffja;</li>
+            </ul>
+            <div class="sns">
+                <a href="#"><i class="xi-instagram"></i></a>
+                <a href="#"><i class="xi-facebook"></i></a>
+                <a href="#"><i class="xi-kakaotalk"></i></a>
+                <a href="#"><i class="xi-youtube"></i></a>
+
+            </div>
+            <address>copyright park.</address>
+        </footer>
+        <div class="toTop">
+            <i class="xi-arrow-up"></i>
+        </div>
+        <script src="./js/jquery-3.6.0.js"></script>
+        <script>
+            $('toTop').on('click' , function(){
+                $('nav').scrollTop('active')   
+            });
+        </script>
+        
+    </div>
+</body>
+</html>

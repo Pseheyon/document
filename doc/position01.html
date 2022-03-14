@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션 - 기초편</title>
+
+    <style>
+
+        body{
+            background:#ff0;
+
+        }
+
+        
+        .absolute{
+            position: absolute;
+            top:100px;
+            right:100px;
+            background-color: #f00;
+        }
+
+        .wrap{
+            position: relative;
+            margin: 200px;
+            width: 100px;
+            height: 300px;
+            background-color: #369;
+        }
+        .headerWrap {
+            position: sticky;
+            background-color: #fff;
+}
+
+
+       .contentWrap{
+        margin: 400px;
+        width: 1000px;
+        height: 300px;
+        background-color: gray;
+       }
+
+       .fixed{
+        position: fixed;
+        top: 100px;
+        right:100px;
+       }
+
+       .popup{
+           position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+       }
+
+    </style>
+</head>
+<body>
+    <header class="headerWrap">
+        stiky
+    </header>
+    <div class="wrap">
+        <section class="contentWrap">
+            <div class="absolute">
+                AB
+            </div>
+
+            <div class="fied">
+                FX
+            </div>
+        </section>
+    </div>
+
+    <div class="popup">
+        <figure>
+            <img src="../img/logo.png" alt="">
+        </figure>
+    </div>
+</body>
+</html>
