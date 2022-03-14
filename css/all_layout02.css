@@ -1,0 +1,89 @@
+.mainVisual {
+    position: relative;
+}
+.mainVisual figure{
+    height: 600px;
+    
+    background: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+}
+.mainVisual .item01{
+    background-image: url(../img/KakaoTalk_20181208_150647371.jpg);
+}
+.mainVisual .item02{
+    background-image: url(../img/KakaoTalk_20181017_214246296.jpg);
+}
+.mainVisual .item03{
+    background-image: url(../img/KakaoTalk_20181208_152500584.jpg);
+}
+
+.mainVisual .slick-dots {
+    position: absolute; 
+    
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    
+    
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.mainVisual .slick-dots li{
+    background-color: beige;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;    
+}
+
+
+
+.mainVisual .slick-arrow{
+    position: absolute;
+    z-index: 100px;
+    height: 100px;
+    border: none;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #333;
+    /* outline: none; */
+    width: 100px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    background: transparent;
+    text-indent: -9999999999px;
+}
+.mainVisual .slick-prev{
+    top: 50%;
+    left: 100px;
+    transform: rotate(-45deg);
+}
+
+.mainVisual .slick-next{
+    top: 50%;
+    right: 100px;
+    transform: rotate(135deg);
+}
+
+.mainVisual .slick-dots li.slick-active{
+    background: darkkhaki;
+}
+
+.mainVisual .slick-dots button{
+    display: none;
+}
+.mainVisual  .slideArrows i{
+    position: absolute;
+    top: 50%;
+    font-size: 100%;
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    
+}
+.mainVisual .slideArrows i:first-child{
+    left: 100px;
+}
+.mainVisual .slideArrows i:last-child{
+    right: 100px;
+}
