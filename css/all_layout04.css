@@ -1,0 +1,20 @@
+.popUp{
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.popUp button{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    
+
+    /* 인라인 블록속성이랑 비슷함 원래는 인라인 */
+    width: 120px; /* width가 되며, 텍스트가 가운데로 자동으로 옴 */
+    height: 40px;
+    /* notosans가 안먹음 text-alin 자동 line-hight 가 암되도 가운데로 옴 */
+    background-color: azure;
+    border: none;
+    border-radius: 20px;
+}

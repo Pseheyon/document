@@ -1,0 +1,73 @@
+
+.headerWrap{
+    background-color: #13242e;
+    color: #fff;
+    padding: 50px 0;
+    display: block;
+    text-align: center;
+}
+.headerWrap .container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.tabMenu{
+    padding: 100px 0;
+    background-color: #f2f2f2;
+}
+
+.tabMenu .container{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.tabMenu .tabLink {
+    display: flex;
+    
+}
+
+.tabMenu .tabLink li{
+    flex: 1;
+}
+.tabMenu .tabLink li.active{
+    color: blue;
+}
+
+.tabMenu .tabContent>div {
+    display: none;
+}
+
+.tabMenu .tabContent>div.active{
+    display: block;
+}
+
+/* 버튼 */
+.button_wrap{
+    width: 1200px;
+    position: relative;
+}
+.xi-close{
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    padding: 10px;
+    background: #13242e;
+    color: #fff;
+}
+
+
+/* 스크롤시 화면고정 백그라운드 */
+.bgFixde{
+    padding: 200px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/KakaoTalk_20181208_150649826.jpg) no-repeat fixed center center/cover;
+    /* background-attachment: fixed; 축약형 가능 */
+}
+.bgFixde h2{
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 3em;
+    margin-bottom: 30px;
+}
+
