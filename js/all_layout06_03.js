@@ -76,7 +76,7 @@ $(function () {
 
 
     jQuery("#bgndVideo").YTPlayer({
-        videoURL: 'https://www.youtube.com/watch?v=hlWiI4xVXKY',
+        videoURL: 'https://www.youtube.com/watch?v=ScLomYO810g',
         containment: '.movieBg',
         playOnlyIfVisible: true,
         autoplay: true,
@@ -112,13 +112,9 @@ $(function () {
         window.open(linkSite)
     });
 
-
-
     $('.popup01 button').on('click', function () {
         $(this).parent().hide();
     });
-
-
 
     $('.toTop').on('click', function () {
         $('html, body').animate({
@@ -143,17 +139,6 @@ $(function () {
         //     $(window).scrollTop
         // )
     })
-
-
-
-
-
-
-
-
-
-
-
-
+    
     //////////////////////////////////
 })
