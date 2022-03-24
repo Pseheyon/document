@@ -1,0 +1,784 @@
+
+/* topBanner start */
+.topBanner{
+    padding: 24px 0;
+    background: #f3f3f3;
+    
+}
+
+.topBanner .container{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.topBanner .container h2{
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: -0.04em;
+}
+.topBanner .container p{
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.topBanner .container a{
+    display: inline-block;
+    height: 16px;
+    line-height: 10px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 300px;
+    border: 1px solid #333;
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-left: auto;
+}
+
+.topBanner .container i{
+    position: absolute;
+    top: 0;
+    left: 1176px;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* topBanner end */
+
+/* headerWrap start */
+.headerWrap .container{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto ;
+    line-height: 100px;
+}
+
+.headerWrap .container>* {
+    padding: 0 15px;
+}
+
+.headerWrap .serchForm{
+    margin-left: auto;
+}
+
+
+.gnb>ul{
+    display: flex;
+    
+}
+
+.gnb>ul>li {
+    position: relative;
+    padding: 0 20px;
+}
+
+.gnb>ul>li~li::after{/*물결을 사용하여 영역 지정앞의 내용 삭제*/
+
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+     transform: translate(-50%);
+    display: block;
+    width: 2px;
+    height: 13px;
+    background: #333;
+}
+/* .gnb>ul>li:nth-child(1):after{
+    display: none;
+} 앞의 내용 삭제-물결대신 사용가능*/
+
+.headerWrap #serchForm input[type="search"]::placeholder{
+    color:rgb(177,178,250)
+}
+
+.headerWrap #serchForm input[type="search"]:focus::placeholder{
+    color:transparent
+}
+.headerWrap #serchForm button{
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.headerWrap #serchForm button i {
+    font-size: 15px;
+    color: #fff;
+    padding: 10px;
+    
+    background: #333;
+}
+
+/* main Visual */
+.mainVisual .visualSlide{
+    border-top: 1px solid #ddd;
+}
+
+.mainVisual .visualSlide figure{
+    position: relative;
+    height: 600px;
+    
+}
+
+.mainVisual .visualSlide figure i{
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    
+    font-size: 100px;
+    color: #f0f;
+    
+    opacity: 0;
+    transition: 0.5s;
+}
+.mainVisual .visualSlide figure.oo i {
+    opacity: 1;
+    animation: heart 1s infinite;
+}
+
+@keyframes heart {
+    0%{transform: scale(1);}
+    25% {transform: scale(0.5);}
+    50% {transform: scale(1);}
+    75% {transform: scale(0.5);}
+    100% {transform: scale(1);}
+}
+.mainVisual .visualSlide .msLeft{
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    z-index: 999;
+    
+    border-top:  100px solid #fff;
+    border-left: 100px solid transparent;
+
+    transform: translateY(-50%) rotate(-135deg);
+}
+.mainVisual .visualSlide .msLeft.oo {
+    border-top: 100px solid rgb(177,178,250); 
+    opacity: 1;
+    transition: 1s;
+
+}
+
+.mainVisual .visualSlide .msRight{
+    position: absolute;
+    top: 50%;
+    right: 200px;
+    
+    /* height: 200px; */
+
+    border-top:  100px solid #fff;
+    border-right:  100px solid transparent;
+
+    transform: translateY(-50%) rotate(135deg) ;
+}
+
+
+/* .mainVisual .visualSlide figure.slick-ative {
+    transition: 2s;
+} */
+.mainVisual .visualSlide figure .inner{
+    width: 1200px;
+    margin: 300px auto 0 auto ;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.mainVisual .visualSlide figure.itm02 .inner{
+    color: #333;
+}
+
+.mainVisual .visualSlide figure .inner h3{
+    opacity: 0;
+    transform: translateY(100px);
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    text-shadow: 0 0 2px #333;
+    transition: 1s 0.5s;
+}
+.mainVisual .visualSlide figure .inner p{
+    opacity: 0;
+    transform: translateY(100px);
+    font-size: 15px;
+    font-weight: 300;
+    transition: 1s 1s;
+    
+}
+
+.mainVisual .visualSlide figure.slick-active .inner h3{
+    opacity: 1;
+    transform: translateY(0);
+}
+.mainVisual .visualSlide figure.slick-active .inner p{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.mainVisual .visualSlide .itm01{
+    background: url(../imges/mainvisual01.jpg)no-repeat center center/cover;
+}
+.mainVisual .visualSlide .itm02{
+    background: url(../imges/mainvisual02.jpg)no-repeat center center/cover;
+}
+.mainVisual .visualSlide .itm03{
+    background: url(../imges/mainvisual03.jpg)no-repeat center center/cover;
+}
+
+.mainVisual .visualSlide .slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    transform: translateX(-50%);
+    
+    display: flex;
+    gap: 10px;
+}
+
+.mainVisual .visualSlide .slick-dots li{
+    width: 100px;
+    height: 5px;
+    background: #333;
+    transition: 2s;
+}
+.mainVisual .visualSlide .slick-dots li::after{
+    content: "";
+    display: block;
+    width: 0;
+    height:100%;
+    background: #f0f;
+    transition: 0.5s;
+}
+.mainVisual .visualSlide .slick-dots li.slick-active::after{
+    width: 100%;
+    transition: 3s;
+}
+.mainVisual .visualSlide .slick-dots li.slick-active{
+    background: #f3f3f3;
+}
+.mainVisual .visualSlide .slick-dots button {
+    display: none
+}
+
+/* mainProduct */
+
+.mainProduct{
+    padding: 100px 0; 
+    text-align: center;
+}
+
+.mainProduct h2 {
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 0.20em;
+    margin-bottom: 10px;
+}
+
+
+.mainProduct p{
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin-bottom: 30px;
+}
+
+.mainProduct .container{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.mainProduct .container figure{
+    position: relative;
+    flex: 1;
+    padding:  0 15px;
+}
+
+.mainProduct .container figure{
+    position: relative;
+    flex: 1;
+    padding: 0 15px;
+}
+
+.mainProduct .container figure .inner{
+    margin-bottom: 15px;
+}
+.mainProduct .container figure strong {
+    display: block;
+    margin-bottom: 10px;
+}
+.mainProduct .container figure a{
+    display: inline-block;
+    padding:  10px 30px;
+    background: #333;
+    color: #fff;
+}
+.mainProduct .container figure a:hover{
+    background: #f3f3f3;
+    color: rgb(177,178,250); 
+}
+
+.mainProduct .inner{
+    overflow: hidden;
+}
+
+.mainProduct .inner img{
+    transition: 0.5s;
+}
+.mainProduct .inner:hover img {
+    transform: scale(1.2);
+}
+
+.mainProduct .container figure .label {
+    position: absolute;
+    top:  -10px;
+    right: 0;
+
+    border-top: 10px solid #f0f;
+    border-left: 50px solid #f0f;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f0f;
+    vertical-align: middle;
+}
+
+.mainProduct .container figure .label span{
+    position: absolute;
+    top: -6px;
+    left: -45px;
+    color: #fff;
+
+    font-size: 14px;
+    
+}
+
+.eventBanner{
+    padding: 100px 0;
+    background: url(../imges/mainvisual03.jpg) no-repeat fixed center center/cover;
+    text-align: center;
+    color: #fff;
+    filter: grayscale(1);
+}
+
+.eventBanner{
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 0.20em;
+    margin-bottom: 10px;
+}
+.eventBanner p{
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.-25em;
+    margin-bottom: 30px;
+}
+.eventBanner i {
+    padding: 7px;
+    background: rgb(177,178,250);
+    border-radius: 30px;
+    margin-left: 15px;
+    z-index: 999;
+}
+.evenetProduct {
+    padding: 100px 0;
+}
+
+.evenetProduct .container {
+    display: flex;
+    width:1200px;
+    margin: 0 auto;
+}
+.evenetProduct .container>div {
+    padding: 0 15px;
+    text-align: center;
+}
+
+.evenetProduct .left {
+    width: 40%;
+}
+.evenetProduct .eProductSlide {
+    padding: 5px;
+    border: 5px solid #ddd;
+}
+
+.evenetProduct .right {
+    display: flex;
+    align-items: center;
+
+    width:60%;
+}
+
+
+.evenetProduct h3 {
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 0.20em;
+    margin-bottom: 10px;
+}
+
+.evenetProduct p {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin-bottom: 30px;
+}
+
+.evenetProduct i {
+    padding: 13px;
+    background: #333;
+    color: #fff;
+    border-radius: 7px;
+    margin:0 5px;
+}
+
+
+
+.allProduct {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    background: #f2f2f2;
+}
+
+
+.allProduct h2 {
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 0.20em;
+    margin-bottom: 10px;
+}
+
+.allProduct p {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin-bottom: 30px;
+}
+
+.allProduct .container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.allProduct .aproductSlide figure{
+    padding: 0 15px;
+}
+
+
+.allProduct .inner {
+    margin-bottom: 20px;
+}
+
+.allProduct .inner + strong {
+    display: block;
+    margin-bottom: 20px;
+
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.allProduct .slick-dots {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.allProduct .slick-dots li {
+    width: 13px;
+    height: 13px;
+    background: #333;
+    border-radius: 50%;
+}
+
+.allProduct .slick-dots li.slick-active {
+    background: rgb(177, 178, 250);
+}
+
+.allProduct .slick-dots li button {
+    display: none;
+}
+
+.allProduct i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+    background: #333;
+}
+
+.allProduct i:first-child {
+    margin-left: -700px;
+}
+
+.allProduct i:last-child {
+    margin-left: 700px;
+}
+
+
+.movieBg{
+    padding:  200px 0;
+    background: #000;
+    
+
+    color: #fff;
+    text-align: center;
+    filter: grayscale(2);
+    transition: 0.5s;
+}
+.movieBg:hover{
+    filter: none;
+}
+
+.movieBg h3 {
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 0.20em;
+    margin-bottom: 10px;
+}
+
+.movieBg p {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin-bottom: 30px;
+}
+.movieBg i {
+    font-size: 20px;
+    padding: 10px;
+    background: #333;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.movieBg:hover i {
+    
+    background: rgb(177,178,250);
+    border-radius: 19px;
+    
+}
+
+.customerArea {
+    padding: 100px 0;
+    background-color: #f2f2f2;
+}
+
+.customerArea .container{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.customerArea .container>div{
+    position: relative;
+    flex: 1;
+    padding: 0 15px;
+} 
+.customerArea .container>div .btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    color: #fff;
+    background: rgb(177, 178, 250);
+    padding:  15px 30px;
+    border: 3px solid rgb(177, 178, 250);
+    border-radius: 10px;
+    transition: 0.5s;
+} 
+
+.customerArea .container>div .btn:hover{
+    color: rebeccapurple;
+    background: #fff;
+    border: 3px solid rgb(177, 178, 250);
+    padding:  20px;
+    border-radius: 30px;
+}
+.customerArea .container>div .img{
+    filter: grayscale();
+}
+
+.customerArea .container .tabMenu{
+    display:  flex;
+}
+.customerArea .tabMenu>li{
+    flex: 1;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    
+    cursor: pointer;
+}
+.customerArea .tabMenu>li.oo{
+    background: rgb(177, 178, 250);
+}
+.customerArea .tabMenu>li~li{
+    border-left: 1px solid #fff;
+}
+
+.customerArea .tabContent>div{
+    display: none;
+}
+.customerArea .tabContent>div.oo{
+    display: block;
+}
+.customerArea .tabContent a{
+    display: flex;
+    justify-content: space-between;
+    border: 1px dotted #00f;
+    padding: 10px 3px;
+    border-bottom: 1px solid #ddd;
+}
+.customerArea .tabContent strong{
+    display: block;
+    width: 400px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.tabMenuRight i{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    
+    font-size: 100px;
+    color: #f0f;
+    
+    opacity: 0;
+    transition: 0.5s;
+}
+.tabMenuRight img{
+    filter: grayscale(1);
+}
+.tabMenuRight img:hover{
+    filter: none;
+}
+.tabMenuRight i{
+    opacity: 1;
+    animation: heart 1s infinite;
+}
+
+
+@keyframes heart {
+    0%{transform: scale(1);}
+    25% {transform: scale(0.5);}
+    50% {transform: scale(1);}
+    75% {transform: scale(0.5);}
+    100% {transform: scale(1);}
+}
+
+.footerWrap{
+    background: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footerWrap .top{
+    border-bottom: 1px solid #666;
+}
+.footerWrap .container{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+   padding-bottom: 20px;
+    
+}
+
+/* .footerWrap .left{
+    border-bottom: 1px solid #666;
+} */
+
+.footerWrap .container>dl {
+    display: flex;
+    padding: 0 15px;
+    gap: 40px;
+}
+.footerWrap .container dd{
+    position: relative;
+}
+.footerWrap .container dd:before{
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    
+    transform: translateY( -50%);
+    
+    display: block;
+    width: 1px;
+    height: 13px;
+    background: #f2f2f2;
+}
+.footerWrap .container>div{
+    padding: 0 15px;
+    font-size: 28px;
+
+}
+.footerWrap{
+    padding-bottom: 50px;
+}
+.footerWrap .bottom{
+    padding-top: 20px;
+}
+
+.footerWrap #link{
+    padding: 0 15px;
+}
+.footerWrap #link{
+    background: #333;
+    font-size: 15px;
+    padding: 2px ;
+    outline: none;
+}
+
+.popup01{
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translateX(-50%);
+    border: 1px solid #333;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.popup01 img{
+   width: 400px;
+}
+.popup01 button{
+    position: absolute;
+    inset: auto 20px 20px auto;
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: 1px solid #333;
+    background-color: #f0f;
+    color: #fff;;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.toTop{
+    position: fixed;
+    display: none;
+    inset: auto 50px 100px auto;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.toTop i{
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    font-size: 20px;
+}
